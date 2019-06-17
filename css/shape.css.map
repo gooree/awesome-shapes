@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;;;GAIG;AAEF,eAAe;AAOhB,YAAY;AAKZ,YAAY;AAQZ,UAAU;AAUV,cAAc;AAwBd,qBAAqB;AAoBrB,iBAAiB",
+    "sources": [
+        "shape.scss"
+    ],
+    "names": [],
+    "file": "shape.css"
+}

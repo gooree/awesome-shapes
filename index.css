@@ -1,0 +1,83 @@
+/*!
+ * awesome css shapes v1.0.0
+ * Copyright (c) 2018-2019 gooree
+ * Licensed under MIT (https://github.com/gooree/awesome-shapes/blob/master/LICENSE)
+ */
+/* rectangle */
+/* square */
+/* circle */
+/* oval */
+/* triangle */
+/* corner triangle */
+/* talk bubble */
+.rectangle {
+  width: 100px;
+  height: 60px;
+  background: red;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-right: 20px solid transparent;
+  border-bottom: 34.64px solid red;
+  border-left: 20px solid transparent;
+}
+
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-top: 34.64px solid red;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+}
+
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-right: 34.64px solid red;
+  border-bottom: 20px solid transparent;
+}
+
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 34.64px solid red;
+}
+
+.bubble {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  border-radius: 10px;
+}
+
+.bubble:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 33.33333px;
+  width: 0;
+  height: 0;
+  border-top: 16.66667px solid transparent;
+  border-right: 33.33333px solid red;
+  border-bottom: 16.66667px solid transparent;
+}
+/*# sourceMappingURL=index.css.map */

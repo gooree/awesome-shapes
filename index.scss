@@ -1,0 +1,33 @@
+@import "css/shape.scss";
+
+.rectangle {
+  @include rectangle(100px, 60px, red);
+}
+
+.circle {
+  @include circle(100px, red);
+}
+
+.square {
+  @include square(100px, red);
+}
+
+.triangle-up {
+  @include triangle(20px, red);
+}
+
+.triangle-down {
+  @include triangle(20px, red, 'down');
+}
+
+.triangle-left {
+  @include triangle(20px, red, 'left');
+}
+
+.triangle-right {
+  @include triangle(20px, red, 'right');
+}
+
+.bubble {
+  @include bubble(100px, 100px, red);
+}

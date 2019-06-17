@@ -1,0 +1,103 @@
+/*!
+ * awesome css shapes v1.0.0
+ * Copyright (c) 2018-2019 gooree
+ * Licensed under MIT (https://github.com/gooree/awesome-shapes/blob/master/LICENSE)
+ */
+
+ /* rectangle */
+@mixin rectangle($width, $height, $color) {
+	width: $width;
+	height: $height;
+	background: $color;
+}
+
+/* square */
+@mixin square($size, $color) {
+	@include rectangle($size, $size, $color);
+}
+
+/* circle */
+@mixin circle($size, $color) {
+	@include square($size, $color);
+	-webkit-border-radius: $size / 2;
+	-moz-border-radius: $size / 2;
+	border-radius: $size / 2;
+}
+
+/* oval */
+@mixin oval($width, $height, $color) {
+	width: $width;
+	height: $height;
+	-webkit-border-radius: #{$width} / #{$height};
+	-moz-border-radius: #{$width} / #{$height};
+	border-radius: #{$width} / #{$height};
+	background: $color;
+}
+
+/* triangle */
+@mixin triangle($size, $color, $direction: 'up') {
+	width: 0;
+	height: 0;
+
+	@if $direction == 'up' {
+		border-right: $size solid transparent;
+		border-bottom: $size * 1.732 solid $color;
+		border-left: $size solid transparent;
+	} @else if $direction == 'down' {
+		border-top: $size * 1.732 solid $color;
+		border-right: $size solid transparent;
+		border-left: $size solid transparent;
+	} @else if $direction == 'left' {
+		border-top: $size solid transparent;
+		border-right: $size * 1.732 solid $color;
+		border-bottom: $size solid transparent;
+	} @else if $direction == 'right' {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left: $size * 1.732 solid $color;
+	}
+}
+
+/* corner triangle */
+@mixin corner-triangle($size, $color, $corner: 'top-left') {
+	width: 0;
+	height: 0;
+
+	@if $corner == 'top-left' {
+		border-top: $size solid $color;
+		border-right: $size solid transparent;
+	} @else if $corner == 'top-right' {
+		border-top: $size solid $color;
+		border-left: $size solid transparent;
+	} @else if $corner == 'bottom-left' {
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+	} @else if $corner == 'bottom-right' {
+		border-bottom: $size solid $color;
+		border-left: $size solid transparent;
+	}
+}
+
+/* talk bubble */
+@mixin bubble($width, $height, $color) {
+	width: $width;
+  height: $height;
+  background: $color;
+	position: relative;
+	-moz-border-radius:    $width/10;
+  -webkit-border-radius: $width/10;
+	border-radius:         $width/10;
+	
+	&:before {
+		content: "";
+		position: absolute;
+		right: 100%;
+		top: $width/3;
+		width: 0;
+		height: 0;
+		border-top: $width/6 solid transparent;
+		border-right: $width/3 solid $color;
+		border-bottom: $width/6 solid transparent;
+	}
+}
+
